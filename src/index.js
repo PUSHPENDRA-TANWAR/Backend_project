@@ -8,8 +8,22 @@ dotenv.config({
 })
 
 
-connectDB() // connectDB ko import kara liyaa
 
+/* Ye ek Node.js/Express app ka server start karne wala code hai,
+ jo pehle MongoDB database se connect hota hai,
+  aur uske baad hi server chalu karta hai.*/
+  
+connectDB() // connectDB ko import kara liyaa
+.then(() => {
+    app.listen(process.env.PORT || 8000 , () => {
+        console.log(`server is running at port : ${process.env.PORT}`);
+        
+    })
+})
+.catch((err) => {
+    console.log("MONGO db connection failed !!!" , err);
+    
+})
 
 
 
