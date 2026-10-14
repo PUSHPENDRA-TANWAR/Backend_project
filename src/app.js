@@ -18,6 +18,14 @@ app.use(express.static("public")) // We use express.static() middleware to serve
 // to clients without creating separate routes for each file.
 app.use(cookieParser())
 
+// rotes import 
+
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+
+app.use("/api/vi/users",userRouter) // ye /user control pass kar raha h user.routes pr 
+// ye hamne middleware likha h 
 
 
 export {app}
