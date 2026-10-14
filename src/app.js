@@ -24,7 +24,7 @@ import userRouter from './routes/user.routes.js'
 
 // routes declaration
 
-app.use("/api/vi/users",userRouter) // ye /user control pass kar raha h user.routes pr 
+app.use("/api/v1/users",userRouter) // ye /user control pass kar raha h user.routes pr 
 // ye hamne middleware likha h 
 
 

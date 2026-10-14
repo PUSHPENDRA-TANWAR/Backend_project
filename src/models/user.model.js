@@ -62,7 +62,7 @@
 userSchema.pre("save",async function(next){
     if(!this.isModified("password")) return next(); // password ko firsttime hash 
     // karoge ya update k time has karna h har baar nhi karna isiliye ye if condition lagayi h 
-   this.password = bcrypt.hash(this.password, 10)
+   this.password = await bcrypt.hash(this.password, 10)
    next()
 })
 
